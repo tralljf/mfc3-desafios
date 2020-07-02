@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  app:
+    build: .
+    container_name: desafio-04
+    entrypoint: ./.docker/app-entrypoint.sh
+    volumes:
+      - .:/home/django/app
+    ports:
+      - "8000:8000"
